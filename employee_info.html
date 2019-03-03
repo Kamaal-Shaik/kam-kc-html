@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <script src="./js/bootstrap.min.js" ></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/common-funcs.js"></script>
+  <script src="./js/employee_info.js"></script>  
+  <script src="./js/datatables.min.js"></script>
+  <link rel="stylesheet" href="./css/datatables.min.css">
+  <link rel="stylesheet" href="./css/custom-css.css">
+</head>
+
+<body>
+    <br/>
+    <table>
+        <tr>
+            <td>Transaction Type</td><td>:</td>
+            <td>
+                <select id="ddl_select_trans_type">
+                    <option value="0">Select</option>
+                </select>
+            </td>
+            <td></td>
+        </tr>  
+        <tr>
+            <td>Account Type</td><td>:</td>
+            <td>
+                <select id="ddl_select_acc_type">
+                    <option value="0">Select</option>
+                </select>
+            </td>
+            <td><input type="button" id="btn_add_new_acc_type" value="Add New Account Type"></td>
+        </tr>            
+        <tr>
+            <td>Employee Type</td><td>:</td>
+            <td>
+                <select id="ddl_select_emp_type">
+                    <option value="0">Select</option>
+                </select>
+            </td>
+            <td><input type="button" id="btn_add_new_emp_type" value="Add New Employee Type"></td>
+        </tr>
+        <tr class="ddl_emp_name">
+            <td>Employee Name</td><td>:</td>
+            <td>
+                <select id="ddl_select_emp_name">
+                    <option value="0">Select</option>
+                </select>
+            </td>
+            <td><input type="button" id="btn_add_new_emp" value="Add New Employee"></td>
+        </tr>
+        <tr>
+            <td>From</td><td>:</td><td><input type="text" id="emp_info_datepicker_from"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>To</td><td>:</td><td><input type="text" id="emp_info_datepicker_to"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="4"><input type="button" id="btn_load_employee_info" value="Load Data" /></td>
+        </tr>
+    </table>  <br/>
+
+    <div id="div_emploee_balance_sheet"></div>
+
+
+    <div id="add_new_acc_type_dialog">
+        <table id="tbl_add_new_acc_type">
+            <tr>
+                <td>New Account Type</td><td>:</td>
+                <td><input type="text" id="txt_add_new_acc_type"></td>
+            </tr>
+            <tr>
+                <td>Description</td><td>:</td>
+                <td><input type="text" id="txt_add_new_acc_type_desc"></td>
+            </tr>        
+        </table>
+    </div>
+
+    <div id="add_new_emp_type_dialog">
+        <table id="tbl_add_new_emp_type">
+            <tr>
+                <td>New Employee Type</td><td>:</td>
+                <td><input type="text" id="txt_add_new_emp_type_emp_type"></td>
+            </tr>
+            <tr>
+                <td>Description</td><td>:</td>
+                <td><input type="text" id="txt_add_new_emp_type_desc"></td>
+            </tr>        
+        </table>
+    </div>
+
+    <div id="add_new_emp_dialog">
+        <table id="tbl_add_new_emp">
+            <tr>
+                <td>Account Type</td><td>:</td>
+                <td>
+                    <select id="ddl_add_new_emp_acc_type">
+                        <option value="0">Select</option>
+                    </select>
+                </td>
+            </tr>            
+            <tr>
+                <td>Employee Type</td><td>:</td>
+                <td>
+                    <select id="ddl_add_new_emp_emp_type">
+                        <option value="0">Select</option>
+                    </select>
+                </td>
+            </tr>            
+            <tr>
+                <td>New Employee</td><td>:</td>
+                <td><input type="text" id="txt_add_new_emp_emp_name"></td>
+            </tr>
+            <tr>
+                <td>Amount To Pay</td><td>:</td>
+                <td><input type="text" id="txt_add_new_emp_amount_to_pay"></td>
+            </tr>            
+            <tr>
+                <td>Description</td><td>:</td>
+                <td><input type="text" id="txt_add_new_emp_desc"></td>
+            </tr>        
+        </table>
+    </div>
+</body>
+ 

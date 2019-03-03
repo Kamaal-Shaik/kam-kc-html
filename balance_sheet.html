@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <script src="./js/bootstrap.min.js" ></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/common-funcs.js"></script>
+  <script src="./js/balance_sheet.js"></script>  
+  <script src="./js/datatables.min.js"></script>
+  <link rel="stylesheet" href="./css/datatables.min.css">
+  <link rel="stylesheet" href="./css/custom-css.css">
+</head>
+
+<body>
+  <br/>
+  <div class="">
+    From: <input type="text" id="datepicker_from">
+    To : <input type="text" id="datepicker_to">
+    <input type="button"  id="btn_load_balancesheet" value="Get Data" />
+    <input type="button" id="btn_add_new_trans" value="Add New Transaction" />
+    <br/><br/>
+    <div id="divBalanceSheet"></div>
+
+    <div id="add_new_trans_dialog">
+      <table>
+        <tr>
+          <td>Date</td><td>:</td>
+          <td><input type="text" id="datepicker_add_new_tran"></td>
+        </tr>
+        <tr>
+          <td>Transaction Type</td><td>:</td>
+          <td>
+            <select id="ddl_transaction_type">
+              <option value="0">Select</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Account Type</td><td>:</td>
+          <td>
+            <select id="ddl_transaction_name">
+              <option value="0">Select</option>
+            </select>
+          </td>
+        </tr>      
+        <tr>
+          <td>Payment Type</td><td>:</td>
+          <td>
+            <select id="ddl_transaction_paymentType">
+              <option value="0">Select</option>
+            </select>
+          </td>
+        </tr>
+        <tr class="dis_sHolder">
+          <td>Paid Shareholder</td><td>:</td>
+          <td>
+            <select id="ddl_transaction_shareholder">
+              <option value="0">Select</option>
+            </select>
+          </td>          
+        </tr>                    
+        <tr>
+          <td>Amount</td><td>:</td>
+          <td><input type="text" id="txt_transaction_amount"></td>
+        </tr>
+        <tr class="debit_rel">
+          <td>Payee Type</td><td>:</td>
+          <td>
+            <select id="ddl_payee_type">
+              <option value="0">Select</option>
+            </select>
+          </td>          
+        </tr>        
+        <tr class="debit_rel paying_to">
+          <td>Paying To</td><td>:</td>
+          <td>
+            <select id="ddl_transaction_employee">
+              <option value="0">Select</option>
+            </select>
+          </td>          
+        </tr>         
+        <tr class="debit_rel balance_to_pay">
+          <td>Balance To Pay</td><td>:</td>
+          <td><span id="spn_balance_to_pay"></span></td>          
+        </tr>        
+        <tr>
+          <td>Description</td><td>:</td>
+          <td><input type="text" id="txt_transaction_desc"></td>          
+        </tr>                            
+      </table>
+  
+    </div>
+  </div>
+</body>
+ 
