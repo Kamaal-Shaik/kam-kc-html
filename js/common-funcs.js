@@ -1,5 +1,6 @@
 // var global_url = 'http://localhost:5000/kc/';
-var global_url = 'http://localhost:5252/kc/';
+// var global_url = 'http://localhost:5252/kc/';
+var global_url = 'https://kam-flask.herokuapp.com/kc/';
 
 function load_values_in_dropdowns(ddl_id, default_test, data_lst, key_text, value_text){
     jQuery("#"+ddl_id).html('');
